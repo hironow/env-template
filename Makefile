@@ -17,8 +17,7 @@ help: ## Display this help screen
 
 # utils
 cmd-exists-%:
-	@hash $(*) > /dev/null 2>&1 || \
-		(echo "ERROR: '$(*)' must be installed and available on your PATH."; exit 1)
+	@hash $(*) > /dev/null 2>&1 || (echo "ERROR: '$(*)' must be installed and available on your PATH."; exit 1)
 
 guard-%:
 	@if [ -z '${${*}}' ]; then echo 'ERROR: environment variable $* not set' && exit 1; fi
