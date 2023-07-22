@@ -4,7 +4,7 @@
 
 ```shell
 # create your .env file
-copy .env.example .env
+copy example.env .env
 
 # run the project
 make
