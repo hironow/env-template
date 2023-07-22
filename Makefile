@@ -24,6 +24,12 @@ guard-%:
 
 
 # this repository specific
+check-dockerignore:  # Check .dockerignore works ref. https://stackoverflow.com/questions/38946683/how-to-test-dockerignore-file
+	docker build --no-cache -t build-context -f Dockerfile .
+	@echo "-- check image files --"
+	docker container run --rm build-context
+	docker image rm build-context
+
 echo:
 	@echo ${FOO} ${BAR}
 

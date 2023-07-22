@@ -1,0 +1,8 @@
+Dockerfile
+README.md
+.git
+.gitignore
+.env
+.env.*
+example.env
+private/
